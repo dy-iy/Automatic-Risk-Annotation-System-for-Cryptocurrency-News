@@ -2,8 +2,8 @@ import re
 import math
 import pandas as pd
 
-CSV_PATH = r"D:\CurRisk\collect_sta\collected\only_coin.csv"
-OUT_PATH = r"D:\CurRisk\collect_sta\collected\risk_12cls.csv"
+CSV_PATH = r"news.csv"
+OUT_PATH = r"risk_12cls.csv"
 
 df = pd.read_csv(CSV_PATH)
 df["内容"] = df["内容"].fillna("").astype(str)
