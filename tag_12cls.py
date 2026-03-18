@@ -278,7 +278,7 @@ def risk_score(text: str) -> float:
 
 df["risk"] = df["内容"].apply(risk_score)
 
-out_df = df[["序号","内容","链接","risk"]]
+out_df = df[["新闻id","内容","链接","risk"]]
 out_df.to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
 print("Saved:", OUT_PATH)
 print(out_df["risk"].describe())
